@@ -1,9 +1,23 @@
+body {
+    background-color:  rgb(150, 235, 150)
+}
+
 .App{
-    width: 800px;
+    min-width: 320px;
+    max-width: 1000px;
     border: solid 10px teal;
     padding: 20px;
     margin: 25px auto;
 
 }
 
-
+@media screen and (min-width: 600px) {
+    body {
+    background-color: rgb(65, 186, 119);
+}
+}
+@media screen and (min-width: 800px) {
+    body {
+    background-color: rgb(186, 187, 65);
+}
+}
