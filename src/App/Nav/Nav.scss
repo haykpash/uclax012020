@@ -1,15 +1,33 @@
 .Nav { 
-
-    background: rgb(248, 162, 162); 
+    
+    font-size: 20px;
+    background: rgb(149, 196, 155); 
     padding: 20px; 
 
       .hamburger {
+          
+          width: 30px;
+          height: 30px;
+        
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          color: rgb(156, 33, 33);
+
+          
           display: block;
-          background-color: orange;
-     }
-      
+          
+          svg {
+              width: 100%;
+              height: auto;
+          }
+          &:hover {
+              color: rgb(36, 192, 22);
+          }
+          
+     }                                           
      .link {
-         background-color: yellow;
+         background-color: rgb(250, 250, 147);
          text-align: center;
      
           a {
@@ -38,7 +56,7 @@
 
 @media screen and (min-width: 600px){
     .Nav {
-        background-color: rgb(36, 39, 39);
+        background-color: rgb(124, 223, 129);
         
         .hamburger {
             display: none;
@@ -54,9 +72,8 @@
 @media screen and (min-width: 800px){
     .Nav {
         background-color: rgb(122, 162, 162);
-
+    
         .hamburger {
-            display: block;
             font-size: 40px;
         }
     }
