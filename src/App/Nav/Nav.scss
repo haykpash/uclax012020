@@ -50,6 +50,9 @@
                   border: solid 5px black;
                   background-color: rgb(238, 6, 6);
             } 
+            &.active {
+                background-color: green;
+            }
         }
     }
 }

@@ -1,0 +1,47 @@
+.Pages {
+    border:  solid 1px red;
+    padding: 20px;
+    margin: 50px auto;
+
+    .colums {
+
+        background-color: rgb(14, 47, 51);
+        padding: 10px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .col {
+            padding: 10px;
+            color: black;
+            width: 100%;
+        } 
+
+        .col1 { background-color: white; }
+        .col2 { background-color: green; }
+        .col3 { background-color: red;   }
+        .col4 { background-color: grey ; }
+    }
+}
+
+@media screen and ( min-width: 600px) {
+    .Main {
+        .colums {
+           .col {
+               width: 45%;
+           }
+        }
+    }
+}
+
+@media screen and ( min-width: 800px) {
+    .Main {
+        .colums {
+            .col {
+              width: 22%;
+           }
+        }
+   }
+
+}
