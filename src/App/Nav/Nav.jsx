@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Nav.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,31 +6,38 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = () => {
 
-    const [showMenu, updateShowMenu] = useState(true);
+    const [showMenu, updateShowMenu] = useState(false);
 
     const handleHamburgerClick = () => {
-        console.log('you hit the hamburger')
+         console.log('Hamburger Click');
 
-        let timbuktu;
-
-        if ( showMenu === true) {
-            timbuktu = false;
-
-        }else {
-            timbuktu = true;
-        }
-
-        updateShowMenu(timbuktu);
-
+         if (showMenu === false){
+             updateShowMenu(true);
+         } else {
+             updateShowMenu(false);
+         }
     }
+
+    const handleWinsowResize = () => {
+        if (window.innerWidth > 599){
+            updateShowMenu(true);
+        } else {
+            updateShowMenu(false);
+        }
+    }
+
+    useEffect (()=>{
+        window.addEventListener('resize', handleWinsowResize);
+        handleWinsowResize();
+    },[]);
+
     return (
-        <nav className='Nav'>
-        
-            <div className="hamburger" onClick={ handleHamburgerClick }>
+         <nav className='Nav'>
+            <div className="hamburger" onClick={handleHamburgerClick}> 
                 <FontAwesomeIcon icon={ faBars }  />
             </div>
-            {
-            showMenu &&
+            { 
+               showMenu &&
             <div className="link">
                 <a href="#">Welcome</a>
                 <a href="#">Services</a>
