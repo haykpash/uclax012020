@@ -2,10 +2,14 @@
     .tabs {
          display: flex;
         .tab {
-            background-color: teal;
+            background-color: rgb(155, 187, 187);
             padding: 10px 20px;
             border-radius: 5px 5px 0px 0px;
             margin-right: 10px;
+
+            &.active {
+                background-color: teal;
+            }
 
         }
     }

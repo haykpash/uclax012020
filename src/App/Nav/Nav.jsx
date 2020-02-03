@@ -19,7 +19,7 @@ const Nav = () => {
          }
     }
 
-    const handleWinsowResize = () => {
+    const handleWindowResize = () => {
         if (window.innerWidth > 599){
             updateShowMenu(true);
         } else {
@@ -28,8 +28,8 @@ const Nav = () => {
     }
 
     useEffect (()=>{
-        window.addEventListener('resize', handleWinsowResize);
-        handleWinsowResize();
+        window.addEventListener('resize', handleWindowResize);
+        handleWindowResize();
     },[]);
 
     return (
