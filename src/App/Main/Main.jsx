@@ -2,8 +2,8 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 
-import Welcome from '../Pages/Welcome.jsx';
-import Services from '../Pages/Services.jsx';
+import Welcome from '../Pages/Welcome/Welcome.jsx';
+import Services from '../Pages/Services/Services.jsx';
 import Contact from '../Pages/Contact.jsx';
 
 const Main = () => {

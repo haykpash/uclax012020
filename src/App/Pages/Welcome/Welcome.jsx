@@ -1,6 +1,7 @@
 import React from 'react';
-import './Pages.scss';
-import Tabbed from '../Tabbed/Tabbed.jsx';
+import '../Pages.scss';
+import Tabbed from './Tabbed/Tabbed.jsx';
+import Staff from './Staff/Staff.jsx';
 
 const Welcome = () => {
     return (
@@ -8,6 +9,8 @@ const Welcome = () => {
             Welcome
 
             <Tabbed/>
+
+            <Staff/>
 
             <div className="colums">
                 <div className='col col1'>Col1</div>
