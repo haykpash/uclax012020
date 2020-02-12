@@ -1,0 +1,57 @@
+.ContactForm {
+    border: solid 1px white;
+    padding: 20px;
+
+     
+    .form-group {
+        margin-bottom: 20px;
+
+        .left {
+            border: solid 1px blue;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        input, textarea {
+            box-sizing: border-box;
+            font-size: 20px;
+            padding: 10px;
+            width: 100%;
+
+            &.invalid {
+                border: solid red;
+              //  color: orange;
+            }
+        }
+
+        textarea {
+            height: 300px;
+        }
+
+        button {
+            background-color: wheat;
+            border: none;
+            font-size: 20px;
+            line-height: 50px;
+            padding: 0px 20px;
+
+            &:hover {background-color: rgb(133, 92, 16);}
+            &:active { background-color: yellowgreen; color: blue}
+        }
+        .right {
+            border: solid 1px black;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .ContactForm {
+        .form-group {
+            display: flex;
+
+            .left { flex: 1; text-align: right; }
+            .right { flex: 2; }
+        }
+    }
+}

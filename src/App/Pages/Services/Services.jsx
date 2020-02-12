@@ -1,14 +1,15 @@
 import React from 'react';
-//import '../Pages.scss';
+import '../Pages.scss';
 import './Services.scss';
-import { serviceType } from './services.js';
+import { timbuktuArrey } from './servicesArrey.js';
 
-const ServiceType = () => {
-    return serviceType.map((serviceType, idx) => {
+const ServicesList = () => {
+    console.log('timbuktuArrey', timbuktuArrey);
+    return timbuktuArrey.map((singleService, idx) => {
         return (
-        <div  key={ idx } className={ 'ServiceType' }>
-            <img src={ serviceType.img } alt={serviceType.name } />
-            <h3>{ serviceType.name }</h3>
+           <div className='Service'>       
+            <img src={ singleService.img } alt={ singleService.title } />
+            <h3>{ singleService.name }</h3>
         </div>
         );
     });
@@ -16,9 +17,11 @@ const ServiceType = () => {
 
 const Services = () => {
     return (
-        <div className = 'Services'>
+        <div className = 'Pages Services'>
             <h2>Services</h2>
-            <ServiceType />
+            <div className='container'>
+                <ServicesList />
+            </div>
         </div>
     );
 }

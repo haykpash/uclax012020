@@ -2,12 +2,21 @@
     background-color: teal;
     margin: 50px 0px;
     padding: 20px;
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     
     .StaffMemeber {
         width: 200px ;
         margin: 20px ; 
         img {
-            display: block;
+            
+             display: block;
+          
+      
         }
         h3 {
             margin: 0px;

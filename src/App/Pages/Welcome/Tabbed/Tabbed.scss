@@ -1,20 +1,27 @@
 .Tabbed {
     .tabs {
          display: flex;
+         //cursor: se-resize (1.5);
+         
+         
         .tab {
             background-color: rgb(155, 187, 187);
-            padding: 10px 20px;
+            padding: 5px 20px;
             border-radius: 5px 5px 0px 0px;
             margin-right: 10px;
+           
 
             &.active {
-                background-color: teal;
+                background-color: teal;  
+                   
             }
-
+            
         }
+
     }
 
     .content {
+        
         background-color: teal;
         padding: 20px ;
         img{}
