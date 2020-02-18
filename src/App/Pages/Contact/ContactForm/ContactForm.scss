@@ -2,17 +2,25 @@
     border: solid 1px white;
     padding: 20px;
 
-     
+    &.form-invalid {
+        border: solid 2px black;
+        background-color: rgb(250, 239, 140);
+    }
+    .error-message {
+        border: solid 5px red;
+        background-color: rgb(255, 215, 35);
+        padding: 20px;
+        margin-bottom: 50px;   
+    } 
     .form-group {
         margin-bottom: 20px;
 
         .left {
-            border: solid 1px blue;
+           // border: solid 1px blue;
             font-weight: bold;
             font-size: 20px;
             padding: 10px;
         }
-
         input, textarea {
             box-sizing: border-box;
             font-size: 20px;
@@ -21,30 +29,28 @@
 
             &.invalid {
                 border: solid red;
-              //  color: orange;
+                background-color: rgb(255, 215, 35);
             }
         }
-
         textarea {
             height: 300px;
         }
 
         button {
-            background-color: wheat;
+            color: cornsilk;
+            background-color: rgb(131, 101, 48);
             border: none;
             font-size: 20px;
             line-height: 50px;
             padding: 0px 20px;
-
-            &:hover {background-color: rgb(133, 92, 16);}
+            &:hover {background-color: rgb(202, 145, 39);}
             &:active { background-color: yellowgreen; color: blue}
         }
-        .right {
-            border: solid 1px black;
-        }
+        // .right {
+        //     border: solid 1px black;
+        // }
     }
 }
-
 @media screen and (min-width: 600px) {
     .ContactForm {
         .form-group {
