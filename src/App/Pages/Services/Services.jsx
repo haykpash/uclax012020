@@ -1,15 +1,28 @@
-import React from 'react';
+import React, {useState, useEffect }from 'react';
 import '../Pages.scss';
 import './Services.scss';
-import { timbuktuArrey } from './servicesArrey.js';
+import API from '../../common/API.js';
+
+
 
 const ServicesList = () => {
-    console.log('timbuktuArrey', timbuktuArrey);
-    return timbuktuArrey.map((singleService, idx) => {
+
+
+    const [servisceItems, setservisceItems] = useState([]);
+    useEffect(() => {
+        // 2. retrueve the data from the server 
+        API.get('services/gallery').then((result) => {
+            // 3. updatye staffMember with date from servise
+            console.log('Staff Sercer Response', result);
+            setservisceItems(result.data);
+        });
+    },[])
+    
+    return servisceItems.map((servisceItem, dox) => {
         return (
-           <div className='Service'>       
-            <img src={ singleService.img } alt={ singleService.title } />
-            <h3>{ singleService.name }</h3>
+           <div key={ dox }className='Service'>       
+            <img src={ servisceItem.image } alt={ servisceItem.title } />
+            <h3>{ servisceItem.title }</h3>
         </div>
         );
     });
