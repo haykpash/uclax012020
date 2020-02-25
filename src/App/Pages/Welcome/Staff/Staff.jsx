@@ -4,12 +4,12 @@ import API from '../../../common/API.js'
 
 const StaffMembers = () => {
     
-    //1. set up state to keep track data form rerver
+    //1. set up state to keep track data form server
     const [staffMembers, setStaffMembers] = useState([]);
     
     // only do this on mount.
     useEffect(() => {
-        // 2. retrueve the data from the server 
+        // 2. retrieve the data from the server 
         API.get('staff').then((result) => {
             // 3. updatye staffMember with date from servise
             console.log('Staff Sercer Response', result);
