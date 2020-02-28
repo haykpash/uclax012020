@@ -30,10 +30,10 @@ const StaffMembers = () => {
 const Staff = () => {
     return (
         <div className='Staff'>
-          <h2>Staff</h2>
-          <div className='container'>
+            <h2>Staff</h2>
+            <div className='container'>
                 <StaffMembers />
-          </div>
+            </div>
         </div>
     )
 }

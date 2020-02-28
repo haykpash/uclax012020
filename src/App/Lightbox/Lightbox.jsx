@@ -10,9 +10,9 @@ const Lightbox = (props) => {
             onClick={ props.turnLightOff }
         >
             <div className={'Light'}>
-                <img 
-                src={ props.imageURL } 
-                alt={ props.imageAlt } 
+                <img className="img"
+                    src={ props.imageURL } 
+                    alt={ props.imageAlt } 
                 />
             </div>
         </div>       

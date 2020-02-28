@@ -5,50 +5,50 @@
     padding: 20px; 
 
     .hamburger {
-          
-          width: 30px;
-          height: 30px;
-        
-          position: absolute;
-          right: 20px;
-          top: 20px;
-          color: rgb(156, 33, 33);
+            
+            width: 30px;
+            height: 30px;
+            
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            color: rgb(156, 33, 33);
 
-          
-          display: block;
-          
-          svg {
-              width: 100%;
-              height: auto;
-          }
-          &:hover {
-              color: rgb(13, 224, 76);
-          }
-          
+            
+            display: block;
+            
+            svg {
+                width: 100%;
+                height: auto;
+            }
+            &:hover {
+                color: rgb(13, 224, 76);
+            }
+            
     }                                           
     .link {
-          background-color: rgb(250, 250, 147);
-          text-align: center;
-     
+            background-color: rgb(250, 250, 147);
+            text-align: center;
+        
         a {
-              background-color: purple;
-              color: white;
-              
-              display: block;
-              padding: 20px;
-              border-radius: 5px;
-              margin: 10px;
+                background-color: purple;
+                color: white;
+                
+                display: block;
+                padding: 20px;
+                border-radius: 5px;
+                margin: 10px;
 
-              text-decoration: none;
-              text-transform: uppercase;
+                text-decoration: none;
+                text-transform: uppercase;
 
-              border: solid 5px rgb(9, 80, 15);
+                border: solid 5px rgb(9, 80, 15);
 
-              transition: all 1s;
+                transition: all 1s;
 
-              &:hover {
-                  border: solid 5px black;
-                  background-color: rgb(238, 6, 6);
+                &:hover {
+                    border: solid 5px black;
+                    background-color: rgb(238, 6, 6);
             } 
             &.active {
                 background-color: teal;
