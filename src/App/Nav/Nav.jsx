@@ -11,14 +11,14 @@ const Nav = () => {
 
     const handleHamburgerClick = () => {
             console.log('Hamburger Click');
-
+            
             if (showMenu === false){
                 updateShowMenu(true);
             } else {
                 updateShowMenu(false);
             }
     }
-
+    
     const handleWindowResize = () => {
         if (window.innerWidth > 599){
             updateShowMenu(true);
@@ -26,12 +26,12 @@ const Nav = () => {
             updateShowMenu(false);
         }
     }
-
+    
     useEffect (()=>{
         window.addEventListener('resize', handleWindowResize);
         handleWindowResize();
     },[]);
-
+    
     return (
         <nav className='Nav'>
             <div className="hamburger" onClick={handleHamburgerClick}> 
@@ -49,5 +49,4 @@ const Nav = () => {
         </nav>
     )
 };
-
 export default Nav;
