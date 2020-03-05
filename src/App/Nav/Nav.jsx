@@ -10,13 +10,13 @@ const Nav = () => {
     const [showMenu, updateShowMenu] = useState(false);
 
     const handleHamburgerClick = () => {
-         console.log('Hamburger Click');
+            console.log('Hamburger Click');
 
-         if (showMenu === false){
-             updateShowMenu(true);
-         } else {
-             updateShowMenu(false);
-         }
+            if (showMenu === false){
+                updateShowMenu(true);
+            } else {
+                updateShowMenu(false);
+            }
     }
 
     const handleWindowResize = () => {
@@ -33,16 +33,17 @@ const Nav = () => {
     },[]);
 
     return (
-         <nav className='Nav'>
+        <nav className='Nav'>
             <div className="hamburger" onClick={handleHamburgerClick}> 
                 <FontAwesomeIcon icon={ faBars }  />
             </div>
             { 
-               showMenu &&
+                showMenu &&
             <div className="link">
                 <NavLink to='/'exact>Welcome</NavLink>
                 <NavLink to='/services'>Services</NavLink>
                 <NavLink to='/contact'>Contact</NavLink>
+                <NavLink to='/login'>login</NavLink>
             </div>
             }
         </nav>

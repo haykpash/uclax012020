@@ -44,16 +44,16 @@ const ContactForm = () => {
         } else {
             updateFormIsValid(true);
         // if all is successful - we want to post the data
-          console.log('Posting the data');
-          
-          const postData = {
-              email: emailRef.current.value,
-              message: messageRef.current.value,
-          }
+            console.log('Posting the data');
+            
+            const postData = {
+                email: emailRef.current.value,
+                message: messageRef.current.value,
+            }
 
-          API.post('email/send',postData).then((result) => {
+        API.post('email/send',postData).then((result) => {
             console.log('Posting the data', result);
-          });
+        });
 
         }      
     }

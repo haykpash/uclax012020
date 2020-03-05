@@ -1,0 +1,62 @@
+.Login {
+    border: solid 1px white;
+    padding: 20px;
+
+    &.form-invalid {
+        
+        border: solid 2px black;
+        background-color: rgb(250, 239, 140);
+    }
+    .error-message {
+        width: 400px ;
+        border: solid 5px red;
+        background-color: rgb(255, 215, 35);
+        padding: 20px;
+        margin-bottom: 50px;   
+    } 
+    .form-group {
+        margin-bottom: 20px;
+
+        .left {
+           // border: solid 1px blue;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px;
+        }
+        input {
+            box-sizing: border-box;
+            font-size: 20px;
+            padding: 10px;
+            width: 350px;
+            }
+            .pasword {
+                -webkit-text-security: disc;
+            }
+            &.invalid {
+                border: solid red;
+                background-color: rgb(255, 215, 35);
+            }
+        button {
+            color: cornsilk;
+            background-color: rgb(116, 116, 255);
+            border: none;
+            font-size: 20px;
+            line-height: 50px;
+            padding: 0px 20px;
+            &:hover {background-color: rgb(202, 145, 39);}
+            &:active { 
+                background-color:yellowgreen;
+                color: blue}
+                border: solid none;
+        }
+    }
+}
+@media screen and (min-width: 600px) {
+    .Login {
+        .form-group {
+            display: flex;
+            .left { flex: 1; text-align: right; }
+            .right { flex: 2; }
+        }
+    }
+}
